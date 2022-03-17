@@ -33,6 +33,7 @@ UIElementsSchema/
 *.sublime*
 *.vs
 *.vscode
+*.vsconfig
 *.idea
 
 # Unity3D generated meta files
