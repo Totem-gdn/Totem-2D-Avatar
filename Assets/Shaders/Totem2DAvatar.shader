@@ -178,23 +178,10 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
 
             fixed3 ShadeColor(fixed3 baseColor, fixed shadowAmount)
             {
-                // Blend amount
-                fixed3 zibi = RGBtoHSV(baseColor);
-                // fixed3 lumin = zibi.g + (1-zibi.b);
-                // const fixed shadowAlpha = lerp(1, 2, lumin);
-                //
-                // // Multiply shadow’s color (invert) over base color
-                // fixed3 invert = /*1 - */baseColor;
-                // fixed3 shadowColor = lerp(baseColor, baseColor * invert, shadowAlpha);
-
-                const fixed hue = 0;
-                const fixed sat = 0.2;
-                const fixed val = -0.2;
-
-                zibi.r = (1 + zibi.r + hue) % 1;
-                zibi.g += sat;
-                zibi.b += val;
-                fixed3 shadowColor = HSVtoRGB(zibi);
+                fixed3 hsv = RGBtoHSV(baseColor);
+                hsv.g += 0.2; // Saturation
+                hsv.b -= 0.5 * hsv.b; // Value
+                fixed3 shadowColor = HSVtoRGB(hsv);
 
                 // TODO: Fix bleed on alpha 
                 return lerp(baseColor, shadowColor, smoothstep(0, 1, shadowAmount));
