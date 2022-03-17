@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.totem.totemgenerator": {
+      "version": "file:TotemGeneratorUnity-main",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "7.0.3",
       "depth": 1,
