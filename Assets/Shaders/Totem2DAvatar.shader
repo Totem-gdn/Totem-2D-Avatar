@@ -1,5 +1,4 @@
 // TODO Based on Zibi & Dibi
-
 Shader "Totem/2D Avatar (Unlit Sprite)"
 {
     Properties
@@ -15,6 +14,9 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
         [PerRendererData][HideInInspector] _EyesColor ("Eyes Color", Color) = (1,1,1,1)
         [PerRendererData][HideInInspector] _HairColor ("Hair Color", Color) = (1,1,1,1)
         [PerRendererData][HideInInspector] _BodyColor ("Body Color", Color) = (1,1,1,1)
+
+        _Saturation ("Shadow Saturation", Range(0.0, 1.0)) = .2
+        _Brightness ("Shadow Brightness", Range(0.0, 1.0)) = .65
     }
 
     SubShader
@@ -42,7 +44,6 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
             #pragma multi_compile_instancing
             #pragma multi_compile_local _ PIXELSNAP_ON
             #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
-
 
             #include "UnityCG.cginc"
 
@@ -102,7 +103,7 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
                 OUT.color = IN.color * _RendererColor;
 
                 #ifdef PIXELSNAP_ON
-            OUT.vertex = UnityPixelSnap (OUT.vertex);
+                OUT.vertex = UnityPixelSnap (OUT.vertex);
                 #endif
 
                 return OUT;
@@ -116,13 +117,16 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
             sampler2D _AlphaTex;
             sampler2D _MaskTex;
 
+            fixed _Saturation;
+            fixed _Brightness;
+
             fixed4 SampleSpriteTexture(float2 uv)
             {
                 fixed4 color = tex2D(_MainTex, uv);
 
                 #if ETC1_EXTERNAL_ALPHA
-            fixed4 alpha = tex2D (_AlphaTex, uv);
-            color.a = lerp (color.a, alpha.r, _EnableExternalAlpha);
+                fixed4 alpha = tex2D (_AlphaTex, uv);
+                color.a = lerp (color.a, alpha.r, _EnableExternalAlpha);
                 #endif
 
                 return color;
@@ -133,8 +137,8 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
                 fixed4 color = tex2D(_MaskTex, uv);
 
                 #if ETC1_EXTERNAL_ALPHA
-            fixed4 alpha = tex2D (_AlphaTex, uv);
-            color.a = lerp (color.a, alpha.r, _EnableExternalAlpha);
+                fixed4 alpha = tex2D (_AlphaTex, uv);
+                color.a = lerp (color.a, alpha.r, _EnableExternalAlpha);
                 #endif
 
                 return color;
@@ -144,43 +148,45 @@ Shader "Totem/2D Avatar (Unlit Sprite)"
 
             float Epsilon = 1e-10;
 
-            float3 RGBtoHCV(in float3 RGB)
+            fixed3 RGBtoHCV(in fixed3 RGB)
             {
                 // Based on work by Sam Hocevar and Emil Persson
-                float4 P = (RGB.g < RGB.b) ? float4(RGB.bg, -1.0, 2.0 / 3.0) : float4(RGB.gb, 0.0, -1.0 / 3.0);
-                float4 Q = (RGB.r < P.x) ? float4(P.xyw, RGB.r) : float4(RGB.r, P.yzx);
-                float C = Q.x - min(Q.w, Q.y);
-                float H = abs((Q.w - Q.y) / (6 * C + Epsilon) + Q.z);
-                return float3(H, C, Q.x);
+                fixed4 P = (RGB.g < RGB.b) ? fixed4(RGB.bg, -1.0, 2.0 / 3.0) : fixed4(RGB.gb, 0.0, -1.0 / 3.0);
+                fixed4 Q = (RGB.r < P.x) ? fixed4(P.xyw, RGB.r) : fixed4(RGB.r, P.yzx);
+                fixed C = Q.x - min(Q.w, Q.y);
+                fixed H = abs((Q.w - Q.y) / (6 * C + Epsilon) + Q.z);
+                return fixed3(H, C, Q.x);
             }
 
 
-            float3 RGBtoHSV(in float3 RGB)
+            fixed3 RGBtoHSV(in fixed3 RGB)
             {
-                float3 HCV = RGBtoHCV(RGB);
-                float S = HCV.y / (HCV.z + Epsilon);
-                return float3(HCV.x, S, HCV.z);
+                fixed3 HCV = RGBtoHCV(RGB);
+                fixed S = HCV.y / (HCV.z + Epsilon);
+                return fixed3(HCV.x, S, HCV.z);
             }
 
-            float3 HUEtoRGB(in float H)
+            fixed3 HUEtoRGB(in float H)
             {
-                float R = abs(H * 6 - 3) - 1;
-                float G = 2 - abs(H * 6 - 2);
-                float B = 2 - abs(H * 6 - 4);
-                return saturate(float3(R, G, B));
+                fixed R = abs(H * 6 - 3) - 1;
+                fixed G = 2 - abs(H * 6 - 2);
+                fixed B = 2 - abs(H * 6 - 4);
+                return saturate(fixed3(R, G, B));
             }
 
-            float3 HSVtoRGB(in float3 HSV)
+            fixed3 HSVtoRGB(in fixed3 HSV)
             {
-                float3 RGB = HUEtoRGB(HSV.x);
+                fixed3 RGB = HUEtoRGB(HSV.x);
                 return ((RGB - 1) * HSV.y + 1) * HSV.z;
             }
 
             fixed3 ShadeColor(fixed3 baseColor, fixed shadowAmount)
             {
                 fixed3 hsv = RGBtoHSV(baseColor);
-                hsv.g += 0.2; // Saturation
-                hsv.b -= 0.5 * hsv.b; // Value
+                hsv.g += _Saturation; // Saturation
+                hsv.b -= (1-_Brightness) * hsv.b; // Value
+                hsv.gb = saturate(hsv.gb);
+
                 fixed3 shadowColor = HSVtoRGB(hsv);
 
                 // TODO: Fix bleed on alpha 
