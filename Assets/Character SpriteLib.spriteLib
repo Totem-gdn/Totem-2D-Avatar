@@ -183,9 +183,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -2568620823043828302, guid: 78492cdcf9219bc4ebc68e8234621aea, type: 3}
     - m_Name: Male Msc
       m_Hash: -599338142
-      m_Sprite: {fileID: 4229653104117162066, guid: 31f68759fc1a34d9bb5755e644159409, type: 3}
+      m_Sprite: {fileID: -2387521249018169354, guid: 838a939eb0e3cc344ad8c883a79d79f4, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 4229653104117162066, guid: 31f68759fc1a34d9bb5755e644159409, type: 3}
+      m_SpriteOverride: {fileID: -2387521249018169354, guid: 838a939eb0e3cc344ad8c883a79d79f4, type: 3}
     - m_Name: Female Wmp
       m_Hash: 1736895872
       m_Sprite: {fileID: 4229653104117162066, guid: 31f68759fc1a34d9bb5755e644159409, type: 3}

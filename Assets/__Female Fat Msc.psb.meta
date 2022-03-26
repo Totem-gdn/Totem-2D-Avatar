@@ -513,8 +513,8 @@ ScriptedImporter:
     - name: head
       guid: 5cd46b3df294d41978b1ec578db2d165
       position: {x: 86.45398, y: -131.56384, z: 2}
-      rotation: {x: 0, y: 0, z: 0.64278764, w: 0.76604444}
-      length: 273.9875
+      rotation: {x: 0, y: 0, z: 0.64278764, w: 0.7660445}
+      length: 273.98743
       parentId: -1
       color:
         serializedVersion: 2
@@ -2211,16 +2211,16 @@ ScriptedImporter:
     - name: neck
       guid: 3adc8c2f0fb97404f99c469ef2145d7d
       position: {x: 252.64209, y: -0.000008697363, z: 1}
-      rotation: {x: 0, y: 0, z: -0.043618586, w: 0.9990483}
-      length: 107.86314
+      rotation: {x: 0, y: 0, z: -0.04361824, w: 0.9990483}
+      length: 107.86327
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4284440575
     - name: head
       guid: 5cd46b3df294d41978b1ec578db2d165
-      position: {x: 107.863205, y: 0.000040266947, z: 2}
-      rotation: {x: 0, y: 0, z: 0.087154865, w: 0.9961948}
+      position: {x: 107.8633, y: -0.000002408362, z: 2}
+      rotation: {x: 0, y: 0, z: 0.08715452, w: 0.99619484}
       length: 273.9875
       parentId: 2
       color:
@@ -2230,7 +2230,7 @@ ScriptedImporter:
       guid: c5f462a11a7f9481b8538d9a316e6197
       position: {x: 217.90222, y: 124.11746, z: 5}
       rotation: {x: 0, y: -0, z: -0.99619466, w: 0.087156154}
-      length: 302.0967
+      length: 302.09677
       parentId: 1
       color:
         serializedVersion: 2
@@ -2273,7 +2273,7 @@ ScriptedImporter:
         rgba: 4294934528
     - name: armDownFront
       guid: db6a6b978260242808a8a52120ce40f5
-      position: {x: 302.09677, y: -0.000033332617, z: 5}
+      position: {x: 302.09683, y: -0.000028013117, z: 5}
       rotation: {x: 0, y: 0, z: -0.04361853, w: -0.9990483}
       length: 288.3403
       parentId: 4
@@ -2300,8 +2300,8 @@ ScriptedImporter:
         rgba: 4278255615
     - name: footBack
       guid: 35d18a9dd2fb740f8b3c4e65e76e812f
-      position: {x: 399.80356, y: -0.00013027985, z: -1}
-      rotation: {x: 0, y: 0, z: -0.49848485, w: -0.8668985}
+      position: {x: 399.8036, y: -0.00012932146, z: -1}
+      rotation: {x: 0, y: 0, z: -0.49848482, w: -0.8668984}
       length: 90.89001
       parentId: 15
       color:
@@ -2311,7 +2311,7 @@ ScriptedImporter:
       guid: e717d0ed9eec846369cb9bae23a02e6d
       position: {x: 130.73141, y: 920.1768, z: 3}
       rotation: {x: 0, y: 0, z: -0.70434994, w: 0.70985293}
-      length: 442.145
+      length: 442.14496
       parentId: -1
       color:
         serializedVersion: 2
@@ -2329,14 +2329,14 @@ ScriptedImporter:
       guid: 039d0b276b1164b218fa449eec81c23e
       position: {x: 444.9076, y: 0.00007519442, z: -1}
       rotation: {x: 0, y: 0, z: -0.015703958, w: 0.9998767}
-      length: 399.80356
+      length: 399.8036
       parentId: 11
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: legDownFront
       guid: aad40908208db418bba1dc7452ef5193
-      position: {x: 442.14496, y: -0.000014926325, z: 3}
+      position: {x: 442.14493, y: -0.000014688827, z: 3}
       rotation: {x: 0, y: 0, z: -0.018877992, w: 0.99982184}
       length: 404.8876
       parentId: 13
@@ -2697,4 +2697,6 @@ ScriptedImporter:
   prefabAssetName: 
   spriteLibAssetName: 
   skeletonAssetName: 
-  secondarySpriteTextures: []
+  secondarySpriteTextures:
+  - name: _MaskTex
+    texture: {fileID: 2800000, guid: 85c6628082710e94c8fcbe493348f74c, type: 3}
