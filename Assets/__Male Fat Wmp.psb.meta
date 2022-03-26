@@ -197,9 +197,9 @@ ScriptedImporter:
     spriteBone:
     - name: head
       guid: 5cd46b3df294d41978b1ec578db2d165
-      position: {x: 39.453857, y: -199.56445, z: 2}
+      position: {x: 39.45398, y: -199.56384, z: 2}
       rotation: {x: 0, y: 0, z: 0.64278764, w: 0.76604444}
-      length: 273.98746
+      length: 273.9875
       parentId: -1
       color:
         serializedVersion: 2
@@ -524,9 +524,9 @@ ScriptedImporter:
     spriteBone:
     - name: head
       guid: 5cd46b3df294d41978b1ec578db2d165
-      position: {x: 67.45386, y: 32.435547, z: 2}
+      position: {x: 67.45401, y: 32.436157, z: 2}
       rotation: {x: 0, y: 0, z: 0.64278764, w: 0.76604444}
-      length: 273.98746
+      length: 273.9875
       parentId: -1
       color:
         serializedVersion: 2
@@ -1643,16 +1643,16 @@ ScriptedImporter:
     - name: neck
       guid: 3adc8c2f0fb97404f99c469ef2145d7d
       position: {x: 252.64209, y: -0.000008697363, z: 1}
-      rotation: {x: 0, y: 0, z: -0.043618917, w: 0.99904823}
-      length: 107.862495
+      rotation: {x: 0, y: 0, z: -0.043618586, w: 0.9990483}
+      length: 107.86314
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4284440575
     - name: head
       guid: 5cd46b3df294d41978b1ec578db2d165
-      position: {x: 107.86258, y: 0.00002285308, z: 2}
-      rotation: {x: 0, y: 0, z: 0.08715521, w: 0.9961948}
+      position: {x: 107.863205, y: 0.000040266947, z: 2}
+      rotation: {x: 0, y: 0, z: 0.087154865, w: 0.9961948}
       length: 273.9875
       parentId: 2
       color:
@@ -1660,16 +1660,16 @@ ScriptedImporter:
         rgba: 4294949565
     - name: armUpFront
       guid: c5f462a11a7f9481b8538d9a316e6197
-      position: {x: 217.90222, y: 124.11746, z: 4}
-      rotation: {x: 0, y: -0, z: -0.9961947, w: 0.08715592}
-      length: 302.0961
+      position: {x: 217.90222, y: 124.11746, z: 5}
+      rotation: {x: 0, y: -0, z: -0.99619466, w: 0.087156154}
+      length: 302.0967
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: handFront
       guid: 137ae2d8868354539a6ec331785ea927
-      position: {x: 302.6471, y: -2.8614419, z: 6}
+      position: {x: 302.6471, y: -2.8614419, z: 8}
       rotation: {x: 0, y: 0, z: 0.043619804, w: 0.99904823}
       length: 160.46484
       parentId: 9
@@ -1678,7 +1678,7 @@ ScriptedImporter:
         rgba: 4294902015
     - name: thumbFront
       guid: 7c44785bde0de44328b146ea2ab21fa1
-      position: {x: 324.67053, y: 59.44973, z: 5}
+      position: {x: 324.67053, y: 59.44973, z: 6}
       rotation: {x: 0, y: 0, z: 0.2588194, w: 0.9659258}
       length: 65.37785
       parentId: 9
@@ -1687,7 +1687,7 @@ ScriptedImporter:
         rgba: 4278223103
     - name: armUpBack
       guid: b33db370b24434dc798a719bf36e6b97
-      position: {x: 260.4336, y: -108.93847, z: -4}
+      position: {x: 260.4336, y: -108.93847, z: -5}
       rotation: {x: 0, y: -0, z: -0.99628204, w: 0.08615215}
       length: 300.64838
       parentId: 1
@@ -1705,8 +1705,8 @@ ScriptedImporter:
         rgba: 4294934528
     - name: armDownFront
       guid: db6a6b978260242808a8a52120ce40f5
-      position: {x: 302.0962, y: 0.00006843613, z: 4}
-      rotation: {x: 0, y: 0, z: -0.04361874, w: -0.9990483}
+      position: {x: 302.09677, y: -0.000033332617, z: 5}
+      rotation: {x: 0, y: 0, z: -0.04361853, w: -0.9990483}
       length: 288.3403
       parentId: 4
       color:
@@ -1714,7 +1714,7 @@ ScriptedImporter:
         rgba: 4294901888
     - name: armDownBack
       guid: a0aca305666eb4880b3a45872c2306be
-      position: {x: 300.64835, y: 0.000014300727, z: -4}
+      position: {x: 300.64835, y: 0.000014300727, z: -5}
       rotation: {x: 0, y: 0, z: -0.044625815, w: -0.9990038}
       length: 286.08673
       parentId: 7
@@ -1732,8 +1732,8 @@ ScriptedImporter:
         rgba: 4278255615
     - name: footBack
       guid: 35d18a9dd2fb740f8b3c4e65e76e812f
-      position: {x: 399.80334, y: -0.00013698856, z: -1}
-      rotation: {x: 0, y: 0, z: -0.49848482, w: -0.8668984}
+      position: {x: 399.80356, y: -0.00013027985, z: -1}
+      rotation: {x: 0, y: 0, z: -0.49848485, w: -0.8668985}
       length: 90.89001
       parentId: 15
       color:
@@ -1743,7 +1743,7 @@ ScriptedImporter:
       guid: e717d0ed9eec846369cb9bae23a02e6d
       position: {x: 130.73141, y: 920.1768, z: 3}
       rotation: {x: 0, y: 0, z: -0.70434994, w: 0.70985293}
-      length: 442.1452
+      length: 442.145
       parentId: -1
       color:
         serializedVersion: 2
@@ -1761,14 +1761,14 @@ ScriptedImporter:
       guid: 039d0b276b1164b218fa449eec81c23e
       position: {x: 444.9076, y: 0.00007519442, z: -1}
       rotation: {x: 0, y: 0, z: -0.015703958, w: 0.9998767}
-      length: 399.80334
+      length: 399.80356
       parentId: 11
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: legDownFront
       guid: aad40908208db418bba1dc7452ef5193
-      position: {x: 442.14517, y: -0.000016588812, z: 3}
+      position: {x: 442.14496, y: -0.000014926325, z: 3}
       rotation: {x: 0, y: 0, z: -0.018877992, w: 0.99982184}
       length: 404.8876
       parentId: 13
@@ -1784,6 +1784,24 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4278190335
+    - name: Weapon Front
+      guid: b1a42c46cf4296549b5fa54d4dfdcbf0
+      position: {x: 81.658585, y: 13.106307, z: 7}
+      rotation: {x: 0, y: 0, z: -0.7372773, w: -0.67559034}
+      length: 176.77284
+      parentId: 5
+      color:
+        serializedVersion: 2
+        rgba: 4278255488
+    - name: Weapon Back
+      guid: 0cffe60a5e642764282bc883d08f745f
+      position: {x: 344.396, y: -24.748543, z: -4}
+      rotation: {x: -0, y: 0, z: -0.7660444, w: -0.64278775}
+      length: 201.73502
+      parentId: 10
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
     parts:
     - spritePosition:
         x: 304
@@ -1867,7 +1885,7 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
-  skeletonAssetReferenceID: fa520e44656db48939c24f5d0a56fde7
+  skeletonAssetReferenceID: 31f68759fc1a34d9bb5755e644159409
   spriteCategoryList:
     categories: []
   spritePackingTag: 
