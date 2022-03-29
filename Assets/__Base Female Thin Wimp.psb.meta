@@ -3024,10 +3024,10 @@ ScriptedImporter:
     spriteBone:
     - name: legUpFront
       guid: e717d0ed9eec846369cb9bae23a02e6d
-      position: {x: 96.731415, y: 57.176758, z: 4}
-      rotation: {x: 0, y: 0, z: -0.70329195, w: 0.71090114}
-      length: 319.76373
-      parentId: -1
+      position: {x: 130.1598, y: 110.442894, z: 4}
+      rotation: {x: 0, y: 0, z: -0.9999856, w: 0.0053804247}
+      length: 319.76358
+      parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294967040
@@ -3393,27 +3393,27 @@ ScriptedImporter:
     spriteBone:
     - name: legUpFront
       guid: e717d0ed9eec846369cb9bae23a02e6d
-      position: {x: 96.731415, y: 920.17676, z: 4}
-      rotation: {x: 0, y: 0, z: -0.70329195, w: 0.71090114}
-      length: 319.76373
+      position: {x: 96.7314, y: 920.17676, z: 4}
+      rotation: {x: 0, y: 0, z: -0.70329195, w: 0.7109012}
+      length: 319.76364
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: legDownFront
       guid: aad40908208db418bba1dc7452ef5193
-      position: {x: 319.76367, y: 0.000053437754, z: 5}
-      rotation: {x: 0, y: 0, z: -0.016890585, w: 0.9998574}
-      length: 527.233
+      position: {x: 319.76355, y: 0.00012098818, z: 5}
+      rotation: {x: 0, y: 0, z: -0.016890626, w: 0.99985737}
+      length: 527.23303
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: footFront
       guid: ac6336adb2dcb487e8047c41bffbfec0
-      position: {x: 532.8945, y: 5.7828164, z: 6}
-      rotation: {x: 0, y: 0, z: 0.49113443, w: 0.87108386}
-      length: 90.11172
+      position: {x: 532.8946, y: 5.782925, z: 6}
+      rotation: {x: 0, y: 0, z: 0.4911344, w: 0.8710838}
+      length: 90.11175
       parentId: 1
       color:
         serializedVersion: 2
@@ -6084,7 +6084,7 @@ ScriptedImporter:
     - name: legUpBack
       guid: 97f36145a33c44c6fa476507a4f65677
       position: {x: 80.30679, y: 917.3154, z: -1}
-      rotation: {x: 0, y: 0, z: -0.7087114, w: 0.7054985}
+      rotation: {x: 0, y: 0, z: -0.70871145, w: 0.7054986}
       length: 324.23608
       parentId: -1
       color:
@@ -6092,8 +6092,8 @@ ScriptedImporter:
         rgba: 4278255615
     - name: legDownBack
       guid: 039d0b276b1164b218fa449eec81c23e
-      position: {x: 324.23602, y: -0.0000033449505, z: -2}
-      rotation: {x: 0, y: 0, z: -0.008374047, w: 0.99996495}
+      position: {x: 324.2361, y: 0.00006754085, z: -2}
+      rotation: {x: 0, y: 0, z: -0.008374047, w: 0.999965}
       length: 520.39874
       parentId: 0
       color:
@@ -6101,9 +6101,9 @@ ScriptedImporter:
         rgba: 4294902015
     - name: footBack
       guid: 35d18a9dd2fb740f8b3c4e65e76e812f
-      position: {x: 520.3988, y: -0.003007895, z: -3}
-      rotation: {x: 0, y: 0, z: -0.4940936, w: -0.8694087}
-      length: 90.89001
+      position: {x: 520.3987, y: -0.002840301, z: -3}
+      rotation: {x: 0, y: 0, z: -0.4940936, w: -0.8694088}
+      length: 90.889984
       parentId: 1
       color:
         serializedVersion: 2
@@ -8630,17 +8630,17 @@ ScriptedImporter:
         rgba: 4286578943
     - name: legUpBack
       guid: 97f36145a33c44c6fa476507a4f65677
-      position: {x: 306.3068, y: 917.3154, z: -1}
-      rotation: {x: 0, y: 0, z: -0.7087114, w: 0.7054985}
+      position: {x: 127.298416, y: -65.132515, z: -1}
+      rotation: {x: 0, y: 0, z: -0.99999744, w: -0.0022719682}
       length: 324.23608
-      parentId: -1
+      parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278255615
     - name: footBack
       guid: 35d18a9dd2fb740f8b3c4e65e76e812f
       position: {x: 520.39874, y: -0.0030129575, z: -3}
-      rotation: {x: 0, y: 0, z: -0.49409363, w: -0.8694088}
+      rotation: {x: 0, y: 0, z: -0.4940936, w: -0.8694087}
       length: 90.89001
       parentId: 15
       color:
@@ -8648,10 +8648,10 @@ ScriptedImporter:
         rgba: 4278255360
     - name: legUpFront
       guid: e717d0ed9eec846369cb9bae23a02e6d
-      position: {x: 130.73141, y: 920.1768, z: 4}
-      rotation: {x: 0, y: 0, z: -0.70329195, w: 0.71090114}
-      length: 319.76367
-      parentId: -1
+      position: {x: 130.15987, y: 110.44286, z: 4}
+      rotation: {x: 0, y: 0, z: -0.9999856, w: 0.0053804247}
+      length: 319.7636
+      parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294967040
@@ -8675,8 +8675,8 @@ ScriptedImporter:
         rgba: 4294902015
     - name: legDownFront
       guid: aad40908208db418bba1dc7452ef5193
-      position: {x: 319.76364, y: 0.000054988614, z: 5}
-      rotation: {x: 0, y: 0, z: -0.016890585, w: 0.9998574}
+      position: {x: 319.7636, y: 0.000054429416, z: 5}
+      rotation: {x: 0, y: 0, z: -0.016890626, w: 0.99985737}
       length: 527.2329
       parentId: 13
       color:
