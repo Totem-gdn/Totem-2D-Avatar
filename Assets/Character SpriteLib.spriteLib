@@ -395,8 +395,8 @@ MonoBehaviour:
       m_Sprite: {fileID: 3710177541960185467, guid: 593e37aac1e1a0c4dab824691448b168, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 3710177541960185467, guid: 593e37aac1e1a0c4dab824691448b168, type: 3}
-    - m_Name: Curly
-      m_Hash: 846517287
+    - m_Name: Dreadlocks
+      m_Hash: -1238230345
       m_Sprite: {fileID: -2573474950092206347, guid: f3953d0a48d0e7143b97337082f379b5, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -2573474950092206347, guid: f3953d0a48d0e7143b97337082f379b5, type: 3}
