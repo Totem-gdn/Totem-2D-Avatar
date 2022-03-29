@@ -43,8 +43,8 @@ MonoBehaviour:
       m_Sprite: {fileID: -5036433897690787055, guid: 838a939eb0e3cc344ad8c883a79d79f4, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -5036433897690787055, guid: 838a939eb0e3cc344ad8c883a79d79f4, type: 3}
-    - m_Name: Buzzcut
-      m_Hash: -314125787
+    - m_Name: BuzzCut
+      m_Hash: -720661307
       m_Sprite: {fileID: 55146164728276282, guid: 26b721c2e6490ab4e83a43fcc0262e46, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 55146164728276282, guid: 26b721c2e6490ab4e83a43fcc0262e46, type: 3}
@@ -53,8 +53,8 @@ MonoBehaviour:
       m_Sprite: {fileID: 5155253744290610462, guid: 593e37aac1e1a0c4dab824691448b168, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 5155253744290610462, guid: 593e37aac1e1a0c4dab824691448b168, type: 3}
-    - m_Name: Curly
-      m_Hash: 846517287
+    - m_Name: Dreadlocks
+      m_Hash: -1238230345
       m_Sprite: {fileID: -2452509287326163923, guid: f3953d0a48d0e7143b97337082f379b5, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -2452509287326163923, guid: f3953d0a48d0e7143b97337082f379b5, type: 3}
