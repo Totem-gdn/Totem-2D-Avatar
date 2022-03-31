@@ -15,6 +15,9 @@ namespace Totem.Avatar2D.Samples
     private Totem2DAvatar character = default;
 
     [SerializeField]
+    private Totem2DAvatarAnimator controller = default;
+
+    [SerializeField]
     private TextMeshProUGUI stateLabel = default;
 
     #endregion
@@ -25,6 +28,45 @@ namespace Totem.Avatar2D.Samples
     private void Start ()
     {
       Generate();
+    }
+
+    private void Update ()
+    {
+      //
+      // Direction
+      //
+
+      int direction = 0;
+      if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) )
+        direction++;
+      if ( Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.W) )
+        direction--;
+
+      controller.Direction = direction switch
+      {
+        1 => DirState.Right,
+        -1 => DirState.Left,
+        _ => controller.Direction
+      };
+
+      //
+      // Motion
+      //
+
+      if ( direction == 0 )
+        controller.Motion = MotionState.Idle;
+      else if ( Input.GetKey(KeyCode.LeftShift) ||
+                Input.GetKey(KeyCode.RightShift) )
+        controller.Motion = MotionState.Run;
+      else
+        controller.Motion = MotionState.Walk;
+
+      //
+      // Jump
+      //
+
+      if ( Input.GetKey(KeyCode.Space) )
+        controller.Jump();
     }
 
     #endregion

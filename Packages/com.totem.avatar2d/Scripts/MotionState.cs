@@ -3,10 +3,10 @@ namespace Totem.Avatar2D
   /// <summary>
   ///   TODO
   /// </summary>
-  public enum BodyState
+  public enum MotionState
   {
-    Idle,
-    Walk,
-    Run
+    Idle = 0,
+    Walk = 1,
+    Run = 2
   }
 }

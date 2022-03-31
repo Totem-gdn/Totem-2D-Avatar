@@ -12,6 +12,15 @@ namespace Totem.Avatar2D
   [RequireComponent(typeof(Totem2DAvatar), typeof(Animator))]
   public sealed class Totem2DAvatarAnimator : MonoBehaviour
   {
+    #region Constatnts
+
+    private static readonly int ANIM_MOTION = Animator.StringToHash("Motion");
+
+    private static readonly int ANIM_JUMP = Animator.StringToHash("Jump");
+
+    #endregion
+
+
     #region Fields
 
     private Animator _animator;
@@ -24,7 +33,11 @@ namespace Totem.Avatar2D
     /// <summary>
     ///   TODO
     /// </summary>
-    public BodyState Body { get; set; } = BodyState.Idle; // TODO
+    public MotionState Motion
+    {
+      get => (MotionState) _animator.GetInteger(ANIM_MOTION);
+      set => _animator.SetInteger(ANIM_MOTION, (int) value);
+    }
 
     /// <summary>
     ///   The direction in which the avatar is facing.
@@ -64,6 +77,8 @@ namespace Totem.Avatar2D
     /// </summary>
     public void Jump ()
     {
+      _animator.SetTrigger(ANIM_JUMP);
+
       // TODO
     }
 
