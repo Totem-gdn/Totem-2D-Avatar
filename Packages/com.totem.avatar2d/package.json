@@ -19,5 +19,10 @@
     "url": "https://notslot.com"
   },
   "samples": [
+    {
+      "displayName": "Random",
+      "description": "A simple demo featuring a random procedural avatar.",
+      "path": "Samples~/Random"
+    }
   ]
 }
