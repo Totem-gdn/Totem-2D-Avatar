@@ -1,10 +1,18 @@
 {
   "dependencies": {
-    "com.totem.totemgenerator": {
-      "version": "file:TotemGeneratorUnity-main",
       "depth": 0,
       "source": "embedded",
-      "dependencies": {}
+      "dependencies": {
+        "com.unity.2d.animation": "7.0.4",
+        "com.totem.totemgenerator": "1.0.0"
+      }
+    },
+    "com.totem.totemgenerator": {
+      "version": "https://github.com/Totem-gdn/TotemGeneratorUnity.git#1.0.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "923f9e9239503534366414f8d1889e2a819fa219"
     },
     "com.unity.2d.animation": {
       "version": "7.0.4",
@@ -122,7 +130,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.12",
+      "version": "3.0.13",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -131,7 +139,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.14",
+      "version": "2.0.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {
