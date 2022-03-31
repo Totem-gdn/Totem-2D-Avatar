@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using TotemEntities;
@@ -8,8 +9,24 @@ namespace Totem.Avatar2D.Samples
   /// <summary>
   ///   A demo using the MockDB, allows previewing all the avatars that belong to a user.
   /// </summary>
+  [DefaultExecutionOrder(500)]
   internal sealed class AuthSample : MonoBehaviour
   {
+    #region Constants
+
+    private const float JUMP_DURATION = 0.35f;
+
+    private const float JUMP_AMOUNT = 1.8f;
+
+    private static readonly int MAIN_TEX = Shader.PropertyToID("_MainTex");
+
+    private const float BACKGROUND_SPEED_WALK = 0.4f;
+
+    private const float BACKGROUND_SPEED_RUN = 0.8f;
+
+    #endregion
+
+
     #region Inspector
 
     [SerializeField]
@@ -33,6 +50,9 @@ namespace Totem.Avatar2D.Samples
     [SerializeField]
     private TextMeshProUGUI permutationLabel = default;
 
+    [SerializeField]
+    private MeshRenderer backgroundRenderer = default;
+
     #endregion
 
 
@@ -41,6 +61,10 @@ namespace Totem.Avatar2D.Samples
     private TotemMockDB _database;
 
     private string _authedUser;
+
+    private bool _isJumping;
+
+    private float _bgOffset;
 
     #endregion
 
@@ -65,13 +89,41 @@ namespace Totem.Avatar2D.Samples
       TotemAvatar permutation = TotemGenerator.GenerateAvatar();
       character.Avatar = permutation;
       UpdatePermutationLabel(permutation);
+
+      // Stretch background to fill screen 
+      
+      Camera cam = Camera.main;
+      if ( cam == null )
+        return;
+
+      float height = 2 * cam.orthographicSize;
+      float width = height * cam.aspect;
+      backgroundRenderer.transform.localScale = new Vector3(width, height, 1);
     }
 
     private void Update ()
     {
       //
-      // Direction
+      // Authentication form
       //
+
+      // Tab to switch input
+      if ( Input.GetKeyDown(KeyCode.Tab) )
+      {
+        TMP_InputField input = inputUser.isFocused ? inputPass : inputUser;
+        input.Select();
+        input.ActivateInputField();
+      }
+
+      // Ignore input while textfield is focused
+      if ( inputUser.isFocused || inputPass.isFocused )
+        return;
+
+      //
+      // Character controller
+      //
+
+      // Direction
 
       int direction = 0;
       if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) )
@@ -86,24 +138,46 @@ namespace Totem.Avatar2D.Samples
         _ => controller.Direction
       };
 
-      //
       // Motion
-      //
 
+      float offset = 0;
       if ( direction == 0 )
+      {
         controller.Motion = MotionState.Idle;
+      }
       else if ( Input.GetKey(KeyCode.LeftShift) ||
                 Input.GetKey(KeyCode.RightShift) )
+      {
         controller.Motion = MotionState.Run;
+        offset = Time.deltaTime * BACKGROUND_SPEED_RUN;
+      }
       else
+      {
         controller.Motion = MotionState.Walk;
+        offset = Time.deltaTime * BACKGROUND_SPEED_WALK;
+      }
 
-      //
       // Jump
-      //
 
-      if ( Input.GetKey(KeyCode.Space) )
+      if ( Input.GetKeyDown(KeyCode.Space) && !_isJumping )
+      {
+        _isJumping = true;
         controller.Jump();
+        StartCoroutine(Jump());
+      }
+
+      // Background
+
+      if ( direction < 0 )
+        offset *= -1;
+
+      if ( _isJumping )
+        offset *= 1.5f;
+
+      _bgOffset += offset;
+
+      backgroundRenderer.sharedMaterial.SetTextureOffset(
+        MAIN_TEX, new Vector2(_bgOffset, 0));
     }
 
     #endregion
@@ -174,6 +248,27 @@ namespace Totem.Avatar2D.Samples
     {
       permutationLabel.text =
         $"{permutation.sex}\n#{ColorUtility.ToHtmlStringRGB(permutation.skinColor)}\n#{ColorUtility.ToHtmlStringRGB(permutation.eyeColor)}\n#{ColorUtility.ToHtmlStringRGB(permutation.hairColor)}\n{permutation.hairStyle}\n{permutation.bodyFat}\n{permutation.bodyMuscles}";
+    }
+
+    private IEnumerator Jump ()
+    {
+      Vector3 initial = character.transform.position;
+
+      float passed = 0;
+      while ( passed <= JUMP_DURATION )
+      {
+        float progress = Mathf.Sin((passed / JUMP_DURATION) * Mathf.PI);
+        passed += Time.deltaTime;
+
+        Vector3 pos = initial;
+        pos.y += progress * JUMP_AMOUNT;
+        character.transform.position = pos;
+
+        yield return null;
+      }
+
+      character.transform.position = initial;
+      _isJumping = false;
     }
 
     #endregion

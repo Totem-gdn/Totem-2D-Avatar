@@ -5,12 +5,10 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using Object = UnityEngine.Object;
 
-// TODO: Conditional for edit mode
-
 /// <summary>
-///   TODO
+///   Extract a generated PSB sprite atlas as a standalone png.
 /// </summary>
-internal static class SaveTexture
+public static class SaveTexture
 {
   #region Constants
 
@@ -36,9 +34,10 @@ internal static class SaveTexture
         throw new InvalidOperationException(
           $"Texture '{texture.name}' is not readable, the texture memory can not be accessed from scripts. You can make the texture readable in the Texture Import Settings.");
 
-      // TODO
+      // Validate texture is uncompressed
       if ( GraphicsFormatUtility.IsCompressedFormat(texture.graphicsFormat) )
-        throw new Exception($""); // TODO
+        throw new Exception(
+          $"Texture '{texture.name}' is compressed, change its settings to an uncompressed option.");
 
       // Create a new file at the project's root
       byte[] data = texture.EncodeToPNG();

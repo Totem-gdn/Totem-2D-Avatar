@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "displayName": "Totem 2D Avatar",
   "description": "Procedural avatar for Unity leveraging the Totem platform.",
-  "unity": "2020.3",
+  "unity": "2021.2",
   "dependencies": {
     "com.unity.2d.animation": "7.0.4",
     "com.totem.totemgenerator": "1.0.0"

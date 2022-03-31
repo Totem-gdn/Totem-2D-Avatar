@@ -4,12 +4,6 @@ using TotemEntities;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
-// TODO: Editor shows white at first
-// TODO: Runtime (allow for performant updating)
-
-// TODO: Easy access animations
-// TODO: Folded state (colors should show) – maybe State SO where you can assign programmatically or create asset?
-
 namespace Totem.Avatar2D
 {
   [ExecuteAlways]
@@ -32,8 +26,7 @@ namespace Totem.Avatar2D
     [SerializeField]
     private TotemAvatar avatar;
 
-    // TODO: Fold
-
+    [Header("Resolvers")]
     [SerializeField]
     private SpriteResolver hairFront = default;
 
@@ -77,6 +70,8 @@ namespace Totem.Avatar2D
 
     private MaterialPropertyBlock _mpb;
 
+    private SpriteRenderer[] _renderers;
+
     #endregion
 
 
@@ -96,21 +91,21 @@ namespace Totem.Avatar2D
 
     #region MonoBehviour
 
-    private void Update ()
+    private void Start ()
     {
-      // if ( _mpb == null )
-      //   _mpb = new MaterialPropertyBlock();
-      //
-      // SpriteRenderer[]
-      //   z = GetComponentsInChildren<SpriteRenderer>(); // TODO: Cache
-      // foreach ( SpriteRenderer sRenderer in z )
-      // {
-      //   sRenderer.GetPropertyBlock(_mpb);
-      //   _mpb.SetColor(EYES_COLOR, eyesColor);
-      //   _mpb.SetColor(HAIR_COLOR, hairColor);
-      //   _mpb.SetColor(BODY_COLOR, bodyColor);
-      //   sRenderer.SetPropertyBlock(_mpb);
-      // }
+      _renderers = GetComponentsInChildren<SpriteRenderer>();
+      _mpb = new MaterialPropertyBlock();
+      UpdatePermutation();
+    }
+
+    private void OnValidate ()
+    {
+      if ( Application.isPlaying )
+        return;
+
+      _renderers = GetComponentsInChildren<SpriteRenderer>();
+      _mpb = new MaterialPropertyBlock();
+      UpdatePermutation();
     }
 
     #endregion
@@ -119,7 +114,7 @@ namespace Totem.Avatar2D
     #region Methods
 
     /// <summary>
-    ///   TODO
+    ///   Resolve and recolor sprites according to the current avatar permutation.
     /// </summary>
     private void UpdatePermutation ()
     {
@@ -255,12 +250,7 @@ namespace Totem.Avatar2D
       // Note: We must re-activate hidden sprites before re-coloring, otherwise
       // the re-activated sprites will feature the previous color.
 
-      if ( _mpb == null )
-        _mpb = new MaterialPropertyBlock();
-
-      SpriteRenderer[]
-        z = GetComponentsInChildren<SpriteRenderer>(); // TODO: Cache
-      foreach ( SpriteRenderer sRenderer in z )
+      foreach ( SpriteRenderer sRenderer in _renderers )
       {
         sRenderer.GetPropertyBlock(_mpb);
         _mpb.SetColor(EYES_COLOR, avatar.eyeColor);

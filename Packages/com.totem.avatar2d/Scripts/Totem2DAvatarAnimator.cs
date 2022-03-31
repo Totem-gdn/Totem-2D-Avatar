@@ -31,7 +31,7 @@ namespace Totem.Avatar2D
     #region Properties
 
     /// <summary>
-    ///   TODO
+    ///   Active motion animation.
     /// </summary>
     public MotionState Motion
     {
@@ -73,13 +73,11 @@ namespace Totem.Avatar2D
     #region Methods
 
     /// <summary>
-    ///   TODO
+    ///   Perform jump animation.
     /// </summary>
     public void Jump ()
     {
       _animator.SetTrigger(ANIM_JUMP);
-
-      // TODO
     }
 
     #endregion
