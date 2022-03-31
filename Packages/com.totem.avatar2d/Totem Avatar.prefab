@@ -2094,7 +2094,7 @@ GameObject:
   - component: {fileID: 135251039337664306}
   - component: {fileID: 8574878383279399014}
   m_Layer: 0
-  m_Name: Avatar
+  m_Name: Totem Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2151,9 +2151,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af06a51dfcd547f2a680e9c783c95add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyesColor: {r: 1, g: 1, b: 1, a: 1}
-  hairColor: {r: 1, g: 1, b: 1, a: 1}
-  bodyColor: {r: 1, g: 1, b: 1, a: 1}
+  avatar:
+    sex: 0
+    skinColor: {r: 0, g: 0, b: 0, a: 0}
+    hairColor: {r: 0, g: 0, b: 0, a: 0}
+    hairStyle: 0
+    eyeColor: {r: 0, g: 0, b: 0, a: 0}
+    bodyFat: 0
+    bodyMuscles: 0
+  hairFront: {fileID: 6461356763385613670}
+  hairBack: {fileID: 8013465249898707332}
+  bra: {fileID: 1988535476574742484}
+  neck: {fileID: 778162747176995805}
+  head: {fileID: 2565990214334728233}
+  armFront: {fileID: 5410392320125739960}
+  armBack: {fileID: 2297641162368807799}
+  underwear: {fileID: 2227659487189741347}
+  pantLegFront: {fileID: 7380440837325016396}
+  legFront: {fileID: 6377418879359808023}
+  legBack: {fileID: 2315822395116767010}
+  body: {fileID: 6929986444712889186}
 --- !u!114 &61969733967657559
 MonoBehaviour:
   m_ObjectHideFlags: 0

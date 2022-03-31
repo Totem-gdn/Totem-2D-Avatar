@@ -807,27 +807,27 @@ ScriptedImporter:
     spriteBone:
     - name: legUpFront
       guid: e717d0ed9eec846369cb9bae23a02e6d
-      position: {x: 96.731415, y: 920.17676, z: 4}
-      rotation: {x: 0, y: 0, z: -0.70329195, w: 0.71090114}
-      length: 319.76373
+      position: {x: 96.7314, y: 920.17676, z: 4}
+      rotation: {x: 0, y: 0, z: -0.70329076, w: 0.7109024}
+      length: 319.76367
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: legDownFront
       guid: aad40908208db418bba1dc7452ef5193
-      position: {x: 319.76367, y: 0.000051232382, z: 5}
-      rotation: {x: 0, y: 0, z: -0.016890585, w: 0.9998574}
-      length: 527.233
+      position: {x: 319.76352, y: -0.0009705175, z: 5}
+      rotation: {x: 0, y: 0, z: -0.016892314, w: 0.99985737}
+      length: 527.23303
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: footFront
       guid: ac6336adb2dcb487e8047c41bffbfec0
-      position: {x: 532.8944, y: 5.7828155, z: 6}
+      position: {x: 532.8945, y: 5.782928, z: 6}
       rotation: {x: 0, y: 0, z: 0.49113443, w: 0.87108386}
-      length: 90.11172
+      length: 90.111725
       parentId: 1
       color:
         serializedVersion: 2
@@ -2925,16 +2925,16 @@ ScriptedImporter:
     - name: legUpBack
       guid: 97f36145a33c44c6fa476507a4f65677
       position: {x: 93.30679, y: 917.3154, z: -1}
-      rotation: {x: 0, y: 0, z: -0.7087114, w: 0.7054985}
-      length: 324.23608
+      rotation: {x: 0, y: 0, z: 0.708715, w: -0.70549494}
+      length: 324.2361
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278255615
     - name: legDownBack
       guid: 039d0b276b1164b218fa449eec81c23e
-      position: {x: 324.23605, y: 0.000038139882, z: -2}
-      rotation: {x: 0, y: 0, z: -0.008374047, w: 0.99996495}
+      position: {x: 324.2361, y: 0.0034355093, z: -2}
+      rotation: {x: 0, y: 0, z: -0.00837055, w: 0.999965}
       length: 520.39874
       parentId: 0
       color:
@@ -2942,8 +2942,8 @@ ScriptedImporter:
         rgba: 4294902015
     - name: footBack
       guid: 35d18a9dd2fb740f8b3c4e65e76e812f
-      position: {x: 520.3988, y: -0.0030484505, z: -3}
-      rotation: {x: 0, y: 0, z: -0.4940936, w: -0.8694087}
+      position: {x: 520.3987, y: -0.001263636, z: -3}
+      rotation: {x: 0, y: 0, z: 0.4940949, w: 0.869408}
       length: 90.89001
       parentId: 1
       color:

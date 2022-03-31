@@ -1,0 +1,17 @@
+{
+    "name": "Totem2DAvatar",
+    "rootNamespace": "Totem.Avatar2D",
+    "references": [
+        "GUID:79a3d1085dfb74324a23e5dbf5ce2dd9",
+        "GUID:41524c21c95e5fe4dbc5b48bd21995a4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

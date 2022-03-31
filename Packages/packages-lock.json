@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.totem.avatar2d": {
+      "version": "file:com.totem.avatar2d",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
