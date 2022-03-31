@@ -23,6 +23,11 @@
       "displayName": "Random",
       "description": "A simple demo featuring a random procedural avatar.",
       "path": "Samples~/Random"
+    },
+    {
+      "displayName": "Authentication",
+      "description": "A demo using the MockDB, allows previewing all the avatars that belong to a user.",
+      "path": "Samples~/Authentication"
     }
   ]
 }

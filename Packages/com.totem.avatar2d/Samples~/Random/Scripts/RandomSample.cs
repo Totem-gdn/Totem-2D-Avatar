@@ -18,7 +18,7 @@ namespace Totem.Avatar2D.Samples
     private Totem2DAvatarAnimator controller = default;
 
     [SerializeField]
-    private TextMeshProUGUI stateLabel = default;
+    private TextMeshProUGUI permutationLabel = default;
 
     #endregion
 
@@ -81,7 +81,7 @@ namespace Totem.Avatar2D.Samples
     {
       TotemAvatar permutation = TotemGenerator.GenerateAvatar();
       character.Avatar = permutation;
-      stateLabel.text =
+      permutationLabel.text =
         $"{permutation.sex}\n#{ColorUtility.ToHtmlStringRGB(permutation.skinColor)}\n#{ColorUtility.ToHtmlStringRGB(permutation.eyeColor)}\n#{ColorUtility.ToHtmlStringRGB(permutation.hairColor)}\n{permutation.hairStyle}\n{permutation.bodyFat}\n{permutation.bodyMuscles}";
     }
 

@@ -357,7 +357,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1344648451}
         m_TargetAssemblyTypeName: Totem.Avatar2D.Samples.RandomSample, Assembly-CSharp
         m_MethodName: Generate
         m_Mode: 1
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1754247431}
   controller: {fileID: 1754247436}
-  stateLabel: {fileID: 1607124711}
+  permutationLabel: {fileID: 1607124711}
 --- !u!1 &1552167298
 GameObject:
   m_ObjectHideFlags: 0
