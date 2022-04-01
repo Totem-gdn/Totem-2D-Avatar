@@ -10,11 +10,11 @@
       }
     },
     "com.totem.totemgenerator": {
-      "version": "https://github.com/Totem-gdn/TotemGeneratorUnity.git#1.0.0",
+      "version": "https://github.com/Totem-gdn/TotemGeneratorUnity.git#853c8348c577602735a1b2ad1c5a4762bf07ac25",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "923f9e9239503534366414f8d1889e2a819fa219"
+      "hash": "853c8348c577602735a1b2ad1c5a4762bf07ac25"
     },
     "com.unity.2d.animation": {
       "version": "7.0.4",
