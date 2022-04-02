@@ -85,7 +85,7 @@ The characters’ cloth will retain the color of the original texture, other par
 
 We use a secondary mask texture to define the purpose of each area in the texture.
 
-> For reference, you can download the [original masks PSDs](https://github.com/notslot/Totem-2D-Avatar/releases/tag/v1.0.0). They are pre configured with channeling as described below.
+> For reference, you can download the [original masks PSDs](https://github.com/Totem-gdn/Totem-2D-Avatar/releases/tag/v1.0.0). They are pre configured with channeling as described below.
 
 ### Base atlas
 
