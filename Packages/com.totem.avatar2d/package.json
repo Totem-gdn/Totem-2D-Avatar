@@ -6,7 +6,7 @@
   "unity": "2021.2",
   "dependencies": {
     "com.unity.2d.animation": "7.0.4",
-    "com.totem.totemgenerator": "1.0.0"
+    "com.totem.totemgenerator": "1.0.1"
   },
   "keywords": [
     "Totem",

@@ -6,15 +6,15 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.2d.animation": "7.0.4",
-        "com.totem.totemgenerator": "1.0.0"
+        "com.totem.totemgenerator": "1.0.1"
       }
     },
     "com.totem.totemgenerator": {
-      "version": "https://github.com/Totem-gdn/TotemGeneratorUnity.git#853c8348c577602735a1b2ad1c5a4762bf07ac25",
+      "version": "https://github.com/Totem-gdn/TotemGeneratorUnity.git#1.0.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "853c8348c577602735a1b2ad1c5a4762bf07ac25"
+      "hash": "3ec95e084093064f0ce44c72ed7c947f56936fb3"
     },
     "com.unity.2d.animation": {
       "version": "7.0.4",
