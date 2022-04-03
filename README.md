@@ -1,4 +1,4 @@
-# Totem 2D Avatar
+# Totem 2D Avatar for Unity
 
 **Procedural avatar for Unity leveraging the Totem platform.**
 

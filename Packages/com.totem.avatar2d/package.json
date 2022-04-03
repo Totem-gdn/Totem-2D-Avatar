@@ -1,7 +1,7 @@
 {
   "name": "com.totem.avatar2d",
-  "version": "1.0.0",
-  "displayName": "Totem 2D Avatar",
+  "version": "1.0.1",
+  "displayName": "Totem 2D Avatar for Unity",
   "description": "Procedural avatar for Unity leveraging the Totem platform.",
   "unity": "2021.2",
   "dependencies": {
