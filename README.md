@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/1909713/161637467-35074e28-9770-4bc1-8697-c4c68eb8b133.png" width="48px" height="48px" />
+<img src="https://user-images.githubusercontent.com/1909713/161637467-35074e28-9770-4bc1-8697-c4c68eb8b133.png" width="60px" height="60px" />
 
 # Totem 2D Avatar for Unity
 
