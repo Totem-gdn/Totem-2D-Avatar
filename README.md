@@ -63,7 +63,9 @@ The following samples are provided through the Package Manager:
 
 # Production Pipeline
 
-The following is a the production pipeline steps. Its only relevent for those intedning to alter or augment the character.
+The following is a the production pipeline steps.
+
+> It’s only relevent for those intedning to alter or augment the character. All you need to know to use the character is above.
 
 ## PSB Rig
 
