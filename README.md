@@ -6,6 +6,8 @@
 
 ![Totem 2D Avatar](https://user-images.githubusercontent.com/1909713/161641473-15f1bfa5-fe58-4d1a-b81e-d543648a4b4c.gif)
 
+_Initial design & development by [NotSlot](https://github.com/notslot)._
+
 ## Installation
 
 Add the following packages into a Unity 2021.2+ project:
